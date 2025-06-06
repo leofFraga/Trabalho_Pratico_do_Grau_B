@@ -1,15 +1,23 @@
 //para gerenciar a fila de processos e implementar o menu.
-//Menu de opções:
+//Menu de opï¿½ï¿½es:
 //
 //Criar processo
-//Executar próximo
-//Executar processo específico
+//Executar prï¿½ximo
+//Executar processo especï¿½fico
 //Salvar a fila de processos em arquivo
 //Carregar a fila de processos de um arquivo
 #ifndef SISTEMA_H
 #define SISTEMA_H
+#include <list>
+
 class Sistema
 {
+private:
+//std::list<typename T> processos;
+public:
+    Sistema();
+    ~Sistema();
+    void imprime_menu();
 };
 
 #endif
