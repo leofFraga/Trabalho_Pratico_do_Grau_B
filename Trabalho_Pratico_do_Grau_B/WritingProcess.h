@@ -1,9 +1,13 @@
-// executa a gravação de uma expressão em um arquivo de processos (chamado computation.txt)
+// executa a gravaï¿½ï¿½o de uma expressï¿½o em um arquivo de processos (chamado computation.txt)
 #ifndef WRITINGPROCESS_H
 #define WRITINGPROCESS_H
 #include "Process.h"
+#include <fstream>
+
 class WritingProcess : public Process
 {
+public:
+    void escreveExpressao(const std::string& expressao);
 };
 
 #endif
