@@ -1,9 +1,21 @@
-//Lê todas as linhas do arquivo computation.txt. Para cada linha lida, cria um novo ComputingProcess e o adiciona à fila. Depois, limpa o arquivo.
+//Lï¿½ todas as linhas do arquivo computation.txt. Para cada linha lida, cria um novo ComputingProcess e o adiciona ï¿½ fila. Depois, limpa o arquivo.
 #ifndef READINGPROCESS_H
 #define READINGPROCESS_H
-#include "Process.h"
-class ReadingProcess : public Process
-{
+
+#include <vector>
+#include <string>
+#include "ComputingProcess.h"
+
+class ReadingProcess {
+public:
+    // Construtor recebe referÃªncia para o vetor de processos do sistema
+    ReadingProcess(std::vector<ComputingProcess>& processosSistema);
+
+    // MÃ©todo para ler e carregar processos do arquivo
+    void load(const std::string& filename = "computation.txt");
+
+private:
+    std::vector<ComputingProcess>& processos;
 };
 
 #endif
