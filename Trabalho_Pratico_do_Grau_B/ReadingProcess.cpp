@@ -2,9 +2,12 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+using namespace std;
 
 ReadingProcess::ReadingProcess(std::vector<ComputingProcess>& processosSistema)
-    : processos(processosSistema) {}
+    : Process(0),
+    processos(processosSistema) {
+}
 
 void ReadingProcess::load(const std::string& filename) {
     std::ifstream file(filename);
@@ -37,4 +40,9 @@ void ReadingProcess::load(const std::string& filename) {
         std::cerr << "Erro ao limpar o arquivo." << std::endl;
     }
     ofs.close();
+}
+
+void ReadingProcess::execute() {
+    cout << "Executando ReadingProcess..." << endl;
+	load();
 }

@@ -6,11 +6,18 @@ class Process
 private:
     int pid;
 public:
+	// Construtor e destrutor
     Process(int pid);
     ~Process();
-    void execute();
+
+	// Getters
     int getPID();
+
+	// Setters
     void setPID(int pid);
+
+	// Metodos
+    virtual void execute();
 };
 
 #endif

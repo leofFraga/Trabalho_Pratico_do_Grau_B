@@ -5,17 +5,17 @@
 #include <vector>
 #include <string>
 #include "ComputingProcess.h"
+#include "Process.h" // Include the base class header
 
-class ReadingProcess {
-public:
-    // Construtor recebe referência para o vetor de processos do sistema
-    ReadingProcess(std::vector<ComputingProcess>& processosSistema);
-
-    // Método para ler e carregar processos do arquivo
-    void load(const std::string& filename = "computation.txt");
-
+class ReadingProcess : public Process {
 private:
     std::vector<ComputingProcess>& processos;
+public:
+    ReadingProcess(std::vector<ComputingProcess>& processosSistema);
+
+    void load(const std::string& filename = "computation.txt");
+
+    void execute() override;
 };
 
 #endif

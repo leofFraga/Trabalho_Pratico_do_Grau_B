@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ComputingProcess.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="PrintingProcess.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ReadingProcess.cpp" />

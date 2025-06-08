@@ -1,6 +1,11 @@
 #include "WritingProcess.h"
 #include <string>
 using namespace std;
+
+// Construtor e destrutor
+WritingProcess::WritingProcess() : Process(0) {}
+WritingProcess::~WritingProcess() {}
+
 void WritingProcess::escreveExpressao(const string& expressao) {
     // Abrir o arquivo no modo append para não sobrescrever
         ofstream file("computation.txt", ios::app);
@@ -12,4 +17,8 @@ void WritingProcess::escreveExpressao(const string& expressao) {
         file << expressao << endl;
         // Fechar o arquivo após a escrita
         file.close();
+}
+
+void WritingProcess::execute() {
+	cout << "Executando WritingProcess..." << endl;
 }
