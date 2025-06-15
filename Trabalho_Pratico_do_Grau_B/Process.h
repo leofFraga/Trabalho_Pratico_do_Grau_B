@@ -8,9 +8,21 @@ private:
 public:
     Process(int pid);
     ~Process();
+<<<<<<< Updated upstream
     void execute();
     int getPID();
     void setPID(int pid);
+=======
+
+	// Getters
+    int getPID() const;
+
+	// Setters
+    void setPID(int pid);
+
+	// Metodos
+    virtual void execute() = 0;
+>>>>>>> Stashed changes
 };
 
 #endif

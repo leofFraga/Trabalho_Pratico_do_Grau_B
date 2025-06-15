@@ -8,16 +8,22 @@
 //Carregar a fila de processos de um arquivo
 #ifndef SISTEMA_H
 #define SISTEMA_H
-#include <list>
+#include <vector>
+#include "Process.h"
 
-class Sistema
-{
+class Sistema {
 private:
-//std::list<typename T> processos;
+    std::vector<Process*> fila;
+    int pidCounter;
 public:
     Sistema();
     ~Sistema();
-    void imprime_menu();
+    void criarProcesso();
+    void executarProximo();
+    void executarEspecifico();
+    void salvarFila();
+    void carregarFila();
+    void imprimirFila();
+    void menu();
 };
-
 #endif

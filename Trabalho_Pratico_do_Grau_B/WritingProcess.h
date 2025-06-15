@@ -6,7 +6,17 @@
 
 class WritingProcess : public Process
 {
+private:
+	std::string expressao; 
 public:
+<<<<<<< Updated upstream
+=======
+	// Construtor e destrutor
+	WritingProcess(int pid, const std::string &expressao);
+	~WritingProcess();
+
+	// Metodos
+>>>>>>> Stashed changes
     void escreveExpressao(const std::string& expressao);
 };
 
